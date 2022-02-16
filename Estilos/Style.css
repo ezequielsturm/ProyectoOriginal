@@ -1,0 +1,748 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* ------------------Grid Areas------------------*/
+/* DESKTOP */
+
+.container{
+    grid-gap: 10px;
+    margin: 10px 10px;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "section"
+    "footer";
+}
+.container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Areas */
+.header{
+    grid-area: header;
+    background-color: #24262b;
+}
+.navbar{
+    grid-area: navbar;
+    font-family:'Public Sans', sans-serif;
+    color: white;
+    background-color: #24262b; 
+}
+.section{
+    grid-area: section;
+
+}
+.footer{
+    grid-area: footer;
+
+}
+.container > div,
+{   padding: 20px;
+    border-radius: 4px;
+    background-color: ;
+}
+
+/* DESKTOP */
+/* ----------------------------------------------HEADER --------------------------------------*/
+/* logo */
+    .logo{
+    width: 200px;
+}
+/* MENU */
+/* MENU SUPERIOR */
+.menu-bar{
+    display: none;
+}
+.menu-superior{
+    background-color: #24262b;
+    margin: 10px auto; 
+    max-width: 1400px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.menu-superior li{
+    flex: auto;/* los separamos con la misma cantidad de espacio */
+    font-size: 18px;
+    position: relative;
+
+}
+
+.menu-superior li a{
+    padding: 5px;
+    border-radius: 10px;
+    color: white;   
+}
+
+.menu-superior li a:hover{
+    background-color: #00aeff;
+    color: white;
+    transition: .3s;
+    
+    
+}
+.menu-superior li:hover .container_submenu{
+    display: block;
+}
+/* MENU INFERIOR */
+.container_submenu{
+    display: none;
+    background-color: #24262b;
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    margin-top: 10px;
+    border-radius: 5px;
+    
+}
+.container_submenu li{
+    margin-bottom: 30px;
+}
+
+/* CONTENIDO */
+/* Nosotros */
+
+
+.content{
+    max-width: 90%;
+    margin: 10px auto;
+    font-family:'Public Sans', sans-serif;
+}
+.us{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.us .fotonos{
+    margin: 15px auto;
+    width: 800px;
+    height: 500px;
+    border-radius: 5%;
+}
+
+.title-prod{
+    color: black;
+}
+/* Obras */
+
+.gallery-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 15px auto;
+    
+}
+.gallery-container-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.gallery-item{
+    position: relative;
+    margin: 15px 0px;
+
+}
+.gallery--img{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.gallery-title{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+    color: white;
+    background-image: linear-gradient( rgba(255,255,255,0),rgba(0,0,0,1));
+    font-size: 20px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.zoom{
+    transition: transform 0.2s;
+}
+.zoom:hover{
+    transform: scale(1.1);
+
+}
+
+/* Productos */
+
+.gallery-sections{
+    width: 100%;
+    max-width: 1200px;
+    margin: 15px auto;
+}
+
+.gallery-item-prod{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    margin: 15px 0px;
+}
+
+.gallery-img-prod{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.gallery-title-asc{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+    color: white;
+    background-image: linear-gradient( rgba(255,255,255,0),rgba(0,0,0,1));
+    font-size: 20px;
+    margin: 0;
+    border-radius: 10px;
+}
+/* HTML: OBRAS ---------------------------------------------------------*/
+
+/* HTML: PRODUCTOS */
+
+/* HTML: CONTACTOS --------------------------- FORMULARIO Y DATOS EMPRESA */
+
+.formulario{
+    background-color: #181818;
+    color: white;
+    font-family:'Quicksand', sans-serif;
+}
+h3{
+    color: #01d1ec;
+    text-transform: uppercase;
+}
+
+.contact-wrapper{
+    display: flex;
+}
+.contact-wrapper > *{
+    padding: 1em;
+}
+.contact-form{
+    width: 100%;
+    text-align: start;
+    background-color: #222222;
+    border-radius: 4px;
+}
+
+.contact-form form{
+    margin: 0px;
+    padding: 1em;
+}
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #00aeff;
+    margin-bottom: 5px;
+    outline: none;
+    color: aliceblue;
+}
+.contact-form form button{
+    background: #00aeff;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.sendbutton:hover,
+.sendbutton:focus {
+    background-color: #01d1ec;
+    color: white;
+    transition: .5s ease-out;
+    outline: 0;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p{
+    text-align: center;
+    margin: 0 0 1rem 0; 
+}
+.contact-info h4{
+    text-transform: uppercase;
+}
+.contact-info ul{
+    padding: 1em;
+}
+.fas{
+    color: #00aeff;
+    padding-bottom: 0.5rem;
+}
+
+
+.DomicilioEmpresa{
+    height: 350px;
+}
+
+
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    background-color: #24262b;
+    padding: 5px 0 0 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 0px;
+}
+.logo-footer{
+
+        width: 200px;
+}
+.container_footer{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col{
+    width: 20%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    top: 25px;
+    background-color: #00aeff;
+    height: 2px;
+    width: 40px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+
+}
+.footer-col ul li a{
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-weight: 100;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+    
+}
+
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 5px;
+}
+.social-links{
+    margin-left: 60px;
+}
+
+.footer-col .social-links a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 10px 10px 0px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 30px;
+    width: 30px;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.legals{
+    width: 100%;
+    
+}
+.legal{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+    color: #ffffff;
+    display: flex;
+}
+
+
+
+/* -----------------------------------------------------------------------------------MEDIA QUERIES: TABLET */
+/* HTML: INDEX */
+@media (min-width: 701px) and (max-width: 1023px){
+    .container{
+        grid-gap: 10px;
+        margin: 10px 10px;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "section"
+        "footer";
+    }
+
+/* AREAS-TABLET*/
+.header{
+    grid-area: header;
+    background-color: #022946;
+}
+.navbar{
+    grid-area: navbar;
+    font-family:'Public Sans', sans-serif;
+    color: white;
+    background-color: #022946;
+
+}
+.section{
+    grid-area: section;
+}
+.footer{
+    grid-area: footer;
+    background-color: #022946;
+}
+
+/*-------------------- MENU-TABLET */
+/* MENU SUPERIOR*/
+.check{
+    display: none;
+    background-color: #022946;
+}
+
+.menu-bar{
+    display: none;
+}
+.menu-superior{
+    background-color: #022946;
+    margin: 10px auto; 
+    max-width: 1400px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.menu-superior li{
+    flex: auto;/* los separamos con la misma cantidad de espacio */
+    font-size: 18px;
+    position: relative;
+
+}
+
+.menu-superior li a{
+    padding: 5px;
+    border-radius: 10px;
+    color: white;   
+}
+
+.menu-superior li a:hover{
+    background-color: #00aeff;
+    color: white;
+    transition: .3s;
+
+}
+.menu-superior li:hover .container_submenu{
+    display: block;
+}
+/* MENU INFERIOR */
+.container_submenu{
+    display: none;
+    background-color: #022946;
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.container_submenu li{
+    margin-bottom: 15px;
+}
+.us .fotonos{
+    margin: 15px auto;
+    width: 350px;
+    height: 450px;
+    border-radius: 5%;
+}
+
+/* HTML: INDEX CONTENIDO - TABLET */
+
+/* OBBRAS */
+.tablet-none{
+    display: none;
+}
+
+/* HTML: CONTACTO - TABLET */
+/* FORMSECCION-TABLET */
+.formulario{
+    background-color: #181818;
+    color: white;
+    font-family:'Quicksand', sans-serif;
+}
+h3{
+    color: #01d1ec;
+    text-transform: uppercase;
+}
+
+.contact-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.contact-wrapper > *{
+    padding: 1em;
+}
+.contact-form{
+    width: 100%;
+    text-align: start;
+    background-color: #222222;
+    border-radius: 4px;
+}
+
+.contact-form form{
+    margin: 0px;
+    padding: 1em;
+}
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #00aeff;
+    margin-bottom: 5px;
+    outline: none;
+    color: aliceblue;
+}
+.contact-form form button{
+    background: #00aeff;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.sendbutton:hover,
+.sendbutton:focus {
+    background-color: #01d1ec;
+    color: white;
+    transition: .5s ease-out;
+    outline: 0;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p{
+    text-align: center;
+    margin: 0 0 1rem 0; 
+}
+.contact-info h4{
+    text-transform: uppercase;
+}
+.contact-info ul{
+    padding: 1em;
+}
+.fas{
+    color: #00aeff;
+    padding-bottom: 0.5rem;
+}
+
+
+.DomicilioEmpresa{
+    height: 250px;
+    width: 350;
+}
+
+}
+
+/* --------------------------MOBILE-------------- */
+@media (min-width: 0px) and (max-width: 700px){
+.container{
+    grid-gap: 10px;
+    background-color: ;
+    margin: 10px 10px;
+    display: grid;
+    grid-template-areas: 
+    "header header  "
+    "navbar section  "
+    "navbar section "
+    "footer footer";
+}
+
+.section{
+    margin-left: 50px;
+}
+
+.navbar{
+    position: fixed;
+    width: 100px;
+    height: 520px;
+    margin-top: 150px;
+    z-index: 1;
+
+}
+/* Menu  */
+.menu-bar{
+    display: block;
+    cursor: pointer;
+}
+.menu-superior{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-superior li{
+    margin: 40px 0px;
+
+}
+/* Menu Inferior */
+.container_submenu li{
+    display: none;
+}
+/* HTML INDEX - CONTENIDO - TABLET*/
+/* Nosotros */
+.us .fotonos{
+    margin: 15px auto;
+    width: 250px;
+    height: 350px;
+    border-radius: 5%;
+}
+
+/* Obras */
+.tablet-none{
+    display: none;
+}
+
+
+
+/* HTML: CONTACTO - MOBILE */
+/* FORMSECCION-TABLET */
+.formulario{
+    background-color: #181818;
+    color: white;
+    font-family:'Quicksand', sans-serif;
+    margin-left: 110px;
+}
+h3{
+    color: #01d1ec;
+    text-transform: uppercase;
+}
+
+.contact-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.contact-wrapper > *{
+    padding: 1em;
+}
+.contact-form{
+    width: 100%;
+    text-align: start;
+    background-color: #222222;
+    border-radius: 4px;
+}
+
+.contact-form form{
+    margin: 0px;
+    padding: 1em;
+}
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #00aeff;
+    margin-bottom: 5px;
+    outline: none;
+    color: aliceblue;
+}
+.contact-form form button{
+    background: #00aeff;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.sendbutton:hover,
+.sendbutton:focus {
+    background-color: #01d1ec;
+    color: white;
+    transition: .5s ease-out;
+    outline: 0;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p{
+    text-align: center;
+    margin: 0 0 1rem 0; 
+}
+.contact-info h4{
+    text-transform: uppercase;
+}
+.contact-info ul{
+    padding: 1em;
+}
+.fas{
+    color: #00aeff;
+    padding-bottom: 0.5rem;
+}
+.DomicilioEmpresa{
+    height: 250px;
+    width: 350;
+}
+
+/* footer */
+
+.contact-footer {
+    display: none;
+}
+.social-links{
+    margin-left: 30px;
+}
+.logo-footer{
+    width: 200px;
+    margin-left: 50px;
+}
+}
+
+
+
+
+
